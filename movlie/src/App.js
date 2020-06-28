@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { fetchData } from "./api/index";
+import "bootstrap/dist/css/bootstrap.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    data: [],
+  };
+
+  async componentDidMount() {
+    const fetchedData = await fetchData();
+
+    this.setState({
+      data: fetchedData.Search,
+    });
+    console.log("Movie data: ", this.state.data);
+  }
+
+  render() {
+    const style = {
+      width: "15rem",
+      display: "flex",
+    };
+    const movieList = this.state.data.map((value) => (
+      <div className="row container">
+        <div className="col-md-4" style={{ marginBottom: "2rem" }}>
+          <div className="card " style={style}>
+            <img src={value.Poster} class="card-img-top" alt="..."></img>
+            <div className="card-body">
+              <h5 className="card-title">{value.Title}</h5>
+              <p className="card-text">Year: {value.Year}</p>
+              <a href="#" className="btn btn-primary">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    ));
+
+    return (
+      <div className="App  ">
+        <h1>Movie Search</h1>
+        {movieList}
+      </div>
+    );
+  }
 }
 
 export default App;
