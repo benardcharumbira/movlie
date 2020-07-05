@@ -1,5 +1,6 @@
 import React from "react";
 import "./MovieList.css";
+import { Link } from "react-router-dom";
 
 const movieList = (props) => {
   const style = {
@@ -21,9 +22,16 @@ const movieList = (props) => {
                 <div className="card-body">
                   <h5 className="card-title">{value.Title}</h5>
                   <p className="card-text">Year: {value.Year}</p>
-                  <a href="#" className="btn btn-primary">
-                    View
-                  </a>
+                  <button className="btn btn-primary">
+                    <Link
+                      to={{
+                        pathname: `/MovieDetails/${value.imdbId}`,
+                        state: { movie: value.Title },
+                      }}
+                    >
+                      View
+                    </Link>
+                  </button>
                 </div>
               </div>
             </div>
