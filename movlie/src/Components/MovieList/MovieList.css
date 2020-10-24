@@ -1,0 +1,13 @@
+.cardStyling {
+  overflow: hidden;
+}
+
+.viewMovieLink {
+  color: white;
+  text-decoration: none;
+}
+
+.viewMovieLink:hover {
+  color: white;
+  text-decoration: none;
+}
