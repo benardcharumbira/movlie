@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/movlie/static/css/main.37951477.chunk.css",
+    "main.js": "/movlie/static/js/main.c32d309e.chunk.js",
+    "main.js.map": "/movlie/static/js/main.c32d309e.chunk.js.map",
+    "runtime-main.js": "/movlie/static/js/runtime-main.82273fcf.js",
+    "runtime-main.js.map": "/movlie/static/js/runtime-main.82273fcf.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/movlie/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.58d40b2c.chunk.js": "/movlie/static/js/2.58d40b2c.chunk.js",
+    "static/js/2.58d40b2c.chunk.js.map": "/movlie/static/js/2.58d40b2c.chunk.js.map",
+    "index.html": "/movlie/index.html",
+    "precache-manifest.801f202db3e315605509f1eb3ef2e122.js": "/movlie/precache-manifest.801f202db3e315605509f1eb3ef2e122.js",
+    "service-worker.js": "/movlie/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/movlie/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.37951477.chunk.css.map": "/movlie/static/css/main.37951477.chunk.css.map",
+    "static/js/2.58d40b2c.chunk.js.LICENSE.txt": "/movlie/static/js/2.58d40b2c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82273fcf.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.58d40b2c.chunk.js",
+    "static/css/main.37951477.chunk.css",
+    "static/js/main.c32d309e.chunk.js"
+  ]
+}
