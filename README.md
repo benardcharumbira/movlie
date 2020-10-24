@@ -1,4 +1,4 @@
 # movlie
 Movie search application in ReactJS
-![image](../master/movlie/public/home.png)
+![image](../master/public/home.png)
 Demo: https://benardcharumbira.github.io/movlie/.
