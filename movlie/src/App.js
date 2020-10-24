@@ -3,12 +3,18 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { fetchData } from "./api/index";
 import Form from "../src/Components/Form/Form";
-import Spinner from "../src/Components/Spinner/Spinner";
 import MovieList from "./Components/MovieList/MovieList";
 
 class App extends React.Component {
   state = {
     data: [],
+  };
+
+  componentDidMount = async () => {
+    const response = await fetchData("Avengers");
+    this.setState({
+      data: response.Search,
+    });
   };
 
   getMovie = async (event) => {
@@ -17,25 +23,22 @@ class App extends React.Component {
 
     const response = await fetchData(movieName);
 
-    setTimeout(
-      this.setState({
-        data: response.Search,
-      }),
-      10000
-    );
-
-    // console.log(response.Search);
+    this.setState({
+      data: response.Search,
+    });
   };
 
   render() {
-    let movieList = <Spinner />;
-
     return (
       <div className="App">
         <h1>Movie Search</h1>
         <Form getMovie={this.getMovie} />
 
-        <MovieList movies={this.state.data} />
+        {this.state.data ? (
+          <MovieList movies={this.state.data} />
+        ) : (
+          <h3>Loading...</h3>
+        )}
       </div>
     );
   }

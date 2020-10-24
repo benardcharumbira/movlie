@@ -7,7 +7,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Route path="/" component={App} exact />
-      <Route path="/MovieDetails/:id" component={MovieDetails} />
+      <Route path="/movieDetails/:id" component={MovieDetails} />
     </BrowserRouter>
   );
 };

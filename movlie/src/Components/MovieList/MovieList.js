@@ -7,6 +7,7 @@ const movieList = (props) => {
     width: "15rem",
     display: "flex",
   };
+
   return (
     <div className="container">
       <div className="row">
@@ -25,9 +26,10 @@ const movieList = (props) => {
                   <button className="btn btn-primary">
                     <Link
                       to={{
-                        pathname: `/MovieDetails/${value.imdbId}`,
-                        state: { movie: value.Title },
+                        pathname: `/movieDetails/${value.imdbID}`,
+                        movieId: value.imdbID,
                       }}
+                      className="viewMovieLink"
                     >
                       View
                     </Link>
